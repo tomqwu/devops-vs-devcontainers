@@ -1,4 +1,4 @@
-FROM tomqwu/devops-vs-devcontainers-base
+FROM tomqwu/devops-vs-devcontainers-base:1.0
 
 # Install Terraform
 ARG TF_VER=0.12.2
