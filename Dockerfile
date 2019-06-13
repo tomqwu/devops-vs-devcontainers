@@ -9,7 +9,7 @@ RUN apt-get -y install git procps \
     lsb-release unzip wget curl ca-certificates \
     build-essential file \
     python3 python3-distutils python3-pip \
-    less
+    less groff
 
 # Install Terraform
 ARG TF_VER=0.12.2
