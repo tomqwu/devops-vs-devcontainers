@@ -5,17 +5,14 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils 2>&1
 
-RUN apt-get -y install git procps lsb-release unzip wget curl ca-certificates build-essential file
+RUN apt-get -y install git procps lsb-release unzip wget curl ca-certificates build-essential file python3 python3-distutils python3-pip
 
 # Install Terraform
-RUN wget https://releases.hashicorp.com/terraform/0.12.1/terraform_0.12.1_linux_amd64.zip && \
-    unzip terraform_0.12.1_linux_amd64.zip && \
+ARG TF_VER=0.12.2
+RUN wget -q https://releases.hashicorp.com/terraform/${TF_VER}/terraform_${TF_VER}_linux_amd64.zip && \
+    unzip terraform_${TF_VER}_linux_amd64.zip && \
     mv terraform /usr/local/bin/ && \
-    rm terraform_0.12.1_linux_amd64.zip && terraform version
-
-# Install pip3
-RUN curl -s -O https://bootstrap.pypa.io/get-pip.py && \
-    python3 get-pip.py
+    rm terraform_${TF_VER}_linux_amd64.zip && terraform version
 
 # Install awscli
 RUN pip3 install awscli && \
