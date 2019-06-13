@@ -5,7 +5,11 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils 2>&1
 
-RUN apt-get -y install git procps lsb-release unzip wget curl ca-certificates build-essential file python3 python3-distutils python3-pip
+RUN apt-get -y install git procps \
+    lsb-release unzip wget curl ca-certificates \
+    build-essential file \
+    python3 python3-distutils python3-pip \
+    less
 
 # Install Terraform
 ARG TF_VER=0.12.2
