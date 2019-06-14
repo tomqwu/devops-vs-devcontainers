@@ -1,3 +1,6 @@
+# Prerequisite
+Currently, the Windows 7 Docker Toolbox is not supported
+
 # devops-vs-devcontainers
 DevOps Visual Code devcontainers
 
