@@ -4,7 +4,7 @@ Currently, the Windows 7 Docker Toolbox is not supported
 # devops-vs-devcontainers
 DevOps Visual Code devcontainers
 
-# Add visualcode config
+# Add Visual Studio Code config
 create `.devcontainer/devcontainer.json` in the root of the repo
 ```
 {
