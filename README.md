@@ -20,8 +20,8 @@ create `.devcontainer/devcontainer.json` in the root of the repo
 ```
 
 # Available docker tags to use
-Base - https://hub.docker.com/r/tomqwu/devops-vs-devcontainers-base/tags
-DevOps - https://hub.docker.com/r/tomqwu/devops-vs-devcontainers/tags
+1. Base - https://hub.docker.com/r/tomqwu/devops-vs-devcontainers-base/tags
+1. DevOps - https://hub.docker.com/r/tomqwu/devops-vs-devcontainers/tags
 
 
 # More info
