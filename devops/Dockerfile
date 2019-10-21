@@ -1,7 +1,7 @@
 FROM tomqwu/devops-vs-devcontainers-base:1.0
 
 # Install java
-RUN apt update && apt install -y openjdk-8-jre-headless
+RUN apt update && apt install -y openjdk-8-jdk
 
 # Install sbt
 ARG SBT_VERSION=1.2.8
@@ -57,3 +57,8 @@ RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s 
     mv ./kubectl /usr/local/bin/kubectl && \
     kubectl version --client=true
 
+# Install nodejs
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
+    apt -y install nodejs && \
+    node -v && npm -v && \
+    npm install -g @angular/cli
