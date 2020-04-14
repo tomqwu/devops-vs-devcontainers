@@ -1,7 +1,4 @@
-FROM tomqwu/devops-vs-devcontainers-base:1.0
-
-# Install java
-RUN apt update && apt install -y openjdk-8-jdk
+FROM tomqwu/devops-vs-devcontainers-base:1.2
 
 # Install sbt
 ARG SBT_VERSION=1.2.8
@@ -15,7 +12,7 @@ RUN \
   sbt sbtVersion
 
 # Install Terraform
-ARG TF_VER=0.12.10
+ARG TF_VER=0.12.20
 RUN wget -q https://releases.hashicorp.com/terraform/${TF_VER}/terraform_${TF_VER}_linux_amd64.zip && \
     unzip terraform_${TF_VER}_linux_amd64.zip && \
     mv terraform /usr/local/bin/ && \
