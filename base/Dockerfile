@@ -25,6 +25,6 @@ ENV DEBIAN_FRONTEND=dialog
 ENV SHELL /bin/bash
 
 RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.zsh_history" \
-    && echo $SNIPPET >> "/root/.zsh_history" \
+    && echo $SNIPPET >> "/root/.zsh_history" 
 
 CMD ["zsh"]
